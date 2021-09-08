@@ -1,0 +1,24 @@
+
+      <hr />
+      
+      <div class="poste">
+      
+      <ul style="list-style-type:none;">
+        <a class="post-title" style="text-align: 100;">Application Name:</a>
+        <br>
+        <br>
+        <li *ngFor="let subreddit of subreddits">
+          <md-button style="text-align:left">
+            <a routerLink="/view-subreddit/{{subreddit.id}}" class="post-title" style="text-align: left;">{{subreddit.name}}</a>
+            <p class="post-text">Link: {{subreddit.description}}</p>
+          </md-button>
+          <hr />
+
+           
+        </li>
+      </ul>
+    
+    </div>
+    
+      <app-side-bar class="topright"></app-side-bar>
+    

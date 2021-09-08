@@ -1,0 +1,24 @@
+
+
+<ul *ngIf="posts" style="list-style-type:none;">
+    <div class="poste">
+    <li *ngFor="let post of posts | slice:0:1">
+        
+        <a class="post-title">{{ post.subredditName}}</a>
+       </li>
+    <hr />
+<li *ngFor="let post of posts">
+    
+    <a (click)="goToPost(post.id)" class="post-title">{{post.postName}}</a>
+
+    <p class="post-text">This Post Was Created By: {{post.userName}}</p>
+
+    <hr />
+
+</li>
+</div>
+</ul>
+
+<div class="topright">
+    <app-side-bar></app-side-bar>
+</div>
